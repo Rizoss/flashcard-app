@@ -1,0 +1,23 @@
+<h1>🇬🇧 Flashcards</h1>
+
+<form (ngSubmit)="add()" class="add-form">
+  <input [(ngModel)]="newCard.word_en" name="wen" placeholder="Palabra en inglés" required>
+  <input [(ngModel)]="newCard.word_es" name="wes" placeholder="Palabra en español" required>
+  <input [(ngModel)]="newCard.sentence_en" name="sen" placeholder="Frase en inglés">
+  <input [(ngModel)]="newCard.sentence_es" name="ses" placeholder="Frase en español">
+  <button type="submit">+ Añadir</button>
+</form>
+
+<div class="grid">
+  <div *ngFor="let card of cards" class="card" (click)="flip(card.id)" [class.flipped]="flippedId === card.id">
+    <div class="front">
+      <strong>{{ card.word_en }}</strong>
+      <p>{{ card.word_es }}</p>
+      <small> Click para voltear</small>
+    </div>
+    <div class="back">
+      <p>🇬🇧 {{ card.sentence_en }}</p>
+      <p>🇪🇸 {{ card.sentence_es }}</p>
+    </div>
+  </div>
+</div>

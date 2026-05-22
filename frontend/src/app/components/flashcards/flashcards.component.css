@@ -1,0 +1,137 @@
+ .view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* GRID: organiza las tarjetas en filas/columnas automáticas */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* TARJETA: contenedor simple, sin capas ni 3D */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 200px; /* Crece si el texto es largo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.translation {
+  color: #64748b;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.sentence {
+  font-style: italic;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  color: #64748b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Estilos para el buscador */
+.search-box {
+  margin-bottom: 2rem;
+}
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background: white;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Estilos para los botones dentro de la tarjeta */
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 0.5rem;
+}
+
+.card-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-edit { background: #e0f2fe; color: #0369a1; }
+.btn-delete { background: #fee2e2; color: #dc2626; }
+
+.btn-edit:hover { opacity: 0.8; }
+.btn-delete:hover { opacity: 0.8; }

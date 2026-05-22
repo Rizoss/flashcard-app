@@ -1,0 +1,26 @@
+<div class="view">
+      <h1> Añadir nueva palabra</h1>
+      <form (ngSubmit)="addCard()" class="form">
+        <div class="form-group">
+          <label>Inglés</label>
+          <input [(ngModel)]="newCard.word_en" name="wen" placeholder="Ej: resilient" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Español</label>
+          <input [(ngModel)]="newCard.word_es" name="wes" placeholder="Ej: resistente" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Frase en inglés (opcional)</label>
+          <textarea [(ngModel)]="newCard.sentence_en" name="sen" placeholder="Ej: I need to be resilient"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Frase en español (opcional)</label>
+          <textarea [(ngModel)]="newCard.sentence_es" name="ses" placeholder="Ej: Necesito ser resistente"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary">➕ Añadir palabra</button>
+      </form>
+    </div>

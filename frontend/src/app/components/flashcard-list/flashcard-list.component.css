@@ -1,0 +1,56 @@
+.add-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-form input {
+    padding: 0.5rem;
+}
+
+.add-form button {
+    grid-column: span 2;
+    padding: 0.6rem;
+    background: #71ec9a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+}
+
+.front,
+.back {
+    transition: 0.3s;
+}
+
+.back {
+    display: none;
+}
+
+.card.flipped .front {
+    display: none;
+}
+
+.card.flipped .back {
+    display: block;
+}

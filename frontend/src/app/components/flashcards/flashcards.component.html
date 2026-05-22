@@ -1,0 +1,31 @@
+<div class="view">
+  <h1>Mis Flashcards</h1>
+  
+  <!-- BUSCADOR -->
+  <div class="search-box">
+    <input 
+      type="text" 
+      [(ngModel)]="searchTerm" 
+      placeholder="🔍 Buscar palabra..."
+      class="search-input"
+    >
+  </div>
+
+
+  <div class="cards-grid">
+   
+    <div *ngFor="let card of filteredCards" class="card">
+      
+      <!-- Contenido de la tarjeta -->
+      <h3>{{ card.word_en }}</h3>
+      <p class="translation">{{ card.word_es }}</p>
+      <p class="sentence"> {{ card.sentence_en }}</p>
+      <p class="sentence">🇸 {{ card.sentence_es }}</p>
+
+      <div class="card-actions">
+        <button class="btn-delete" (click)="deleteCard(card.id)">🗑️ Borrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

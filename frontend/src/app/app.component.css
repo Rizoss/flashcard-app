@@ -1,0 +1,87 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #7b9eea 0%, #7b97e6 100%);
+  color: white;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-btn {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.nav-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  margin-left: 260px; 
+  padding: 3rem 4rem;
+  width: calc(100% - 260px);
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .nav {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
