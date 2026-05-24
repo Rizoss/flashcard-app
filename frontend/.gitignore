@@ -29,3 +29,5 @@ Thumbs.db
 # Bases de datos
 *.db
 data/
+
+frontend/.env

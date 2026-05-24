@@ -8,7 +8,7 @@ import { firstValueFrom } from 'rxjs';
 })
 export class FlashcardService {
    private http = inject(HttpClient);
-  private API = 'http://localhost:8000/api/cards';
+  private API = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/cards';
 
   async getCards(): Promise<FlashCard[]> {
     return firstValueFrom(this.http.get<FlashCard[]>(this.API));
