@@ -82,5 +82,8 @@ def delete_card(card_id: int):
         conn.commit()
         return {"message": "Borrado correctamente"}
     
+@app.get("/")
+def read_root():
+    return {"message": "Hola desde Render! La API funciona."}
 
    
