@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd frontend && ng build --configuration production",
-  "outputDirectory": "frontend/dist/frontend/browser",
-  "installCommand": "cd frontend && npm install"
-}
